@@ -21,7 +21,11 @@ def get_alerts():
     connection.close()
 
     return alerts
-
+@app.route("/robots.txt")
+def robots():
+    return """User-agent: *
+Allow: /
+"""
 @app.route("/sitemap.xml")
 def sitemap():
     return """<?xml version="1.0" encoding="UTF-8"?>
