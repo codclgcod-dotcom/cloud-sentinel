@@ -22,6 +22,15 @@ def get_alerts():
 
     return alerts
 
+@app.route("/sitemap.xml")
+def sitemap():
+    return """<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://cloud-sentinel-8f8u.onrender.com/</loc>
+    </url>
+</urlset>
+"""
 
 @app.route("/")
 def dashboard():
